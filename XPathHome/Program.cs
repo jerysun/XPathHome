@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Xml;
+﻿using System.Xml;
 using XPathHome.Serializations;
 
 //RemoveAttribute();
@@ -63,7 +62,7 @@ static void SerializeLibrary()
       Color = Color.Two
     });
 
-  library.Books.Add(new Book()
+  library.Books.Add(new Classic()
   {
     Title = "Pride and Prejudice",
     Year = 1888,

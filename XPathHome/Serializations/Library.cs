@@ -4,6 +4,7 @@ namespace XPathHome.Serializations
 {
   [Serializable]
   [XmlRoot(ElementName = "UniversityLibrary")]
+  [XmlInclude(typeof(Classic))]
   public class Library
   {
     [XmlArray(ElementName = "Classics")]
@@ -12,6 +13,5 @@ namespace XPathHome.Serializations
     {
       Books = new List<Book>();
     }
-
   }
 }

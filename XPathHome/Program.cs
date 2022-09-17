@@ -1,10 +1,14 @@
-﻿using System.Xml;
+﻿using System.Reflection;
+using System.Xml;
 using XPathHome.Serializations;
+using XPathHome.SoapSerializations;
 
 //RemoveAttribute();
 //RemoveElement();
 //SerializeBook();
-SerializeLibrary();
+//SerializeLibrary();
+//SerializeSoapBook();
+SerializeSoapLibrary();
 Console.Read();
 
 static XmlDocument GetDoc()
@@ -71,4 +75,34 @@ static void SerializeLibrary()
   });
   
   SerializeXml.DoSerialization<Library>(library, "mylibrary.xml");
+}
+
+static void SerializeSoapBook()
+{
+  var book = new SoapBook()
+  {
+    Title = "Test",
+    Year = 2016
+  };
+  SoapSerializer.DoSerialization<SoapBook>(book, "mysoapbook.xml");
+}
+
+static void SerializeSoapLibrary()
+{
+  var book = new SoapBook()
+  {
+    Title = "Pride and Prejudice",
+    Year = 1813
+  };
+  var book2 = new SoapBook()
+  {
+    Title = "To kill a Mockingbird",
+    Year = 1960
+  };
+
+  var lib = new SoapLibrary()
+  {
+    Books = new List<SoapBook>() { book, book2 }
+  };
+  SoapSerializer.DoSerialization<SoapLibrary>(lib, "mysoaplibrary.xml");
 }

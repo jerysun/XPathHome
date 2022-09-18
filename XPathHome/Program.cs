@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Xml;
+using XPathHome.Deserializations;
 using XPathHome.Serializations;
 using XPathHome.SoapSerializations;
 
@@ -8,7 +9,8 @@ using XPathHome.SoapSerializations;
 //SerializeBook();
 //SerializeLibrary();
 //SerializeSoapBook();
-SerializeSoapLibrary();
+//SerializeSoapLibrary();
+DeserializeBook();
 Console.Read();
 
 static XmlDocument GetDoc()
@@ -105,4 +107,15 @@ static void SerializeSoapLibrary()
     Books = new List<SoapBook>() { book, book2 }
   };
   SoapSerializer.DoSerialization<SoapLibrary>(lib, "mysoaplibrary.xml");
+}
+
+static void DeserializeBook()
+{
+  DeserializeXml.DoDeserialization(out Book? book, "book4des.xml");
+  if (book == null)
+  {
+    Console.WriteLine("The deserialization failed!");
+    return;
+  }
+  Console.WriteLine($"Title: {book.Title}, Author: {book.Author.Remove(0,3)}");
 }

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Book xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Movie="false">
+  <Title>Gone With the Wind</Title>
+  Margaret Mitchell
+  <Color>Two</Color>
+</Book>

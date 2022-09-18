@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPathHome", "XPathHome\XPat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssFeedConverter", "RssFeedConverter\RssFeedConverter.csproj", "{BF2B1B17-AA17-4ECC-A11A-79DA92851174}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherFromXml", "WeatherFromXml\WeatherFromXml.csproj", "{C1D3E7FB-69E0-45C3-BED8-A644DD5DC21F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BF2B1B17-AA17-4ECC-A11A-79DA92851174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF2B1B17-AA17-4ECC-A11A-79DA92851174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF2B1B17-AA17-4ECC-A11A-79DA92851174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D3E7FB-69E0-45C3-BED8-A644DD5DC21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D3E7FB-69E0-45C3-BED8-A644DD5DC21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D3E7FB-69E0-45C3-BED8-A644DD5DC21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D3E7FB-69E0-45C3-BED8-A644DD5DC21F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
